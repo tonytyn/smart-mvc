@@ -8,6 +8,13 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   	<dependencies>
+		<!-- mysql驱动 -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.21</version>
+		</dependency>
+
 		<!-- 解决编译时，报程序包javax.servlet不存在的错误 -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
