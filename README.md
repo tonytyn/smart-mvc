@@ -14,3 +14,6 @@ web容器的加载顺序ServletContext -> context-param -> listener -> filter ->
 创建一个ServletContext(Servlet上下文)，这个web项目的所有部分都将共享这个上下文
 容器将<context-param>转换为键值对，并交给ServletContext
 容器创建<listener>中的类实例，创建监听器
+
+# springMVC流程图
+![img.png](img.png)
