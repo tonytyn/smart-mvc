@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import entity.User;
-import util.DButils;
+import util.DBUtils;
 
 public class UserDAO {
 	
@@ -20,7 +20,7 @@ public class UserDAO {
 		PreparedStatement ps=null;
 		ResultSet rs = null;
 		try {
-			conn=DButils.getconn();
+			conn= DBUtils.getConn();
 			ps=conn.prepareStatement(sql);
 			ps.setString(1, username);
 			ps.setString(2, password);
@@ -33,7 +33,7 @@ public class UserDAO {
 			
 			e.printStackTrace();
 		}finally {
-			DButils.close(conn, ps, rs);
+			DBUtils.close(conn, ps, rs);
 		}
 		
 		return false;
@@ -44,7 +44,7 @@ public class UserDAO {
 		Connection conn=null;
 		PreparedStatement ps =null;
 		try {
-			conn = DButils.getconn();
+			conn = DBUtils.getConn();
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, user.getUsername());
 			ps.setString(2, user.getPassword());
@@ -59,7 +59,7 @@ public class UserDAO {
 			
 			e.printStackTrace();
 		}finally {
-			DButils.close(conn, ps, null);
+			DBUtils.close(conn, ps, null);
 		}
 		return false;
 		
@@ -69,7 +69,7 @@ public class UserDAO {
 		Connection conn = null;
 		PreparedStatement ps = null;
 		try {
-			conn=DButils.getconn();
+			conn= DBUtils.getConn();
 			ps=conn.prepareStatement(sql);
 			ps.setInt(1, id);
 			int i = ps.executeUpdate();
@@ -80,7 +80,7 @@ public class UserDAO {
 			
 			e.printStackTrace();
 		}finally {
-			DButils.close(conn, ps, null);
+			DBUtils.close(conn, ps, null);
 		}
 		return false;
 	}
@@ -91,7 +91,7 @@ public class UserDAO {
 		PreparedStatement ps =null;
 		ResultSet rs =null;
 		try {
-			conn = DButils.getconn();
+			conn = DBUtils.getConn();
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, username);
 			rs = ps.executeQuery();
@@ -102,19 +102,19 @@ public class UserDAO {
 			
 			e.printStackTrace();
 		}finally {
-			DButils.close(conn, ps, rs);
+			DBUtils.close(conn, ps, rs);
 		}
 		return false;
 	}
 	
-	public List<User> lietUser() {//列出所有用户
+	public List<User> listUser() {//列出所有用户
 		String sql = "select * from t_user ";
 		Connection conn=null;
 		PreparedStatement ps =null;
 		ResultSet rs =null;
 		List<User>list = new ArrayList<User>();
 		try {
-			conn = DButils.getconn();
+			conn = DBUtils.getConn();
 			ps = conn.prepareStatement(sql);
 			rs = ps.executeQuery();
 			while(rs.next()) {
@@ -129,7 +129,7 @@ public class UserDAO {
 			
 			e.printStackTrace();
 		}finally {
-			DButils.close(conn, ps, rs);
+			DBUtils.close(conn, ps, rs);
 		}
 		return list;
 	}

@@ -11,11 +11,11 @@ import java.util.Properties;
 import org.apache.commons.dbcp.BasicDataSource;
 
 
-public class DButils {
+public class DBUtils {
 	private static BasicDataSource dataSource;
 	static {
 		Properties prop = new Properties();
-		InputStream in = DButils.class.getClassLoader().getResourceAsStream("jdbc.properties");
+		InputStream in = DBUtils.class.getClassLoader().getResourceAsStream("jdbc.properties");
 		try {
 			prop.load(in);
 			String driver = prop.getProperty("driver");
@@ -38,7 +38,7 @@ public class DButils {
 
 	}
 
-	public static Connection getconn() throws SQLException {
+	public static Connection getConn() throws SQLException {
 		return dataSource.getConnection();
 	}
 	public static void close(Connection conn,PreparedStatement ps, ResultSet rs) {

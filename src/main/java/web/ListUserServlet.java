@@ -1,7 +1,6 @@
 package web;
 
 import java.io.IOException;
-import java.sql.ResultSet;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -24,7 +23,7 @@ public class ListUserServlet extends HttpServlet {
 		
 		//2.调用dao里的方法，获取响应数据,
 		UserDAO dao = new UserDAO();
-		List<User> list = dao.lietUser();
+		List<User> list = dao.listUser();
 		//3.将结果数据绑定到request
 		request.setAttribute("list", list);
 		//4.获取请求转发器并转发

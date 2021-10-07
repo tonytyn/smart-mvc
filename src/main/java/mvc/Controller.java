@@ -11,7 +11,7 @@ public class Controller {
 	@RequestMapping("/listUser.do")
 	public String listUser(HttpServletRequest request) {
 		UserDAO dao = new UserDAO();
-		List<User> list = dao.lietUser();
+		List<User> list = dao.listUser();
 		if(list!=null) {
 			request.setAttribute("list", list);
 			return "listuser";

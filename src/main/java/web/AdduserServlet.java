@@ -1,10 +1,6 @@
 package web;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import dao.UserDAO;
 import entity.User;
-import util.DButils;
 
 
 public class AdduserServlet extends HttpServlet {
