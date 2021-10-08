@@ -15,7 +15,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>ListUserServlet</servlet-name>
-    <url-pattern>/ums/listuser</url-pattern>
+    <url-pattern>/ums/list-user</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
