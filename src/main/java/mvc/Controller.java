@@ -27,7 +27,7 @@ public class Controller {
 		
 		UserDAO dao = new UserDAO();
 		
-		if(dao.loginByNAP(username, password)) {
+		if(dao.login(username, password)) {
 			
 			return "redirect:/listUser.do";
 		}

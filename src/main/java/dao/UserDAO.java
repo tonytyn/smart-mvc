@@ -14,7 +14,7 @@ public class UserDAO {
 	
 	
 	
-	public boolean loginByNAP(String username,String password) {//核对用户数据
+	public boolean login(String username, String password) {//核对用户数据
 		String sql = "select * from t_user where username=? and password=?";
 		Connection conn = null;
 		PreparedStatement ps=null;

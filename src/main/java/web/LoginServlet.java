@@ -20,7 +20,7 @@ public class LoginServlet extends HttpServlet {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		UserDAO dao = new UserDAO();
-		boolean flag = dao.loginByNAP(username, password);
+		boolean flag = dao.login(username, password);
 		if(flag) {
 			request.getSession().setAttribute("user", username);
 			response.getWriter().write("登录成功");
