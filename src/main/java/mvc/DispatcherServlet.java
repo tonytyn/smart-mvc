@@ -16,7 +16,7 @@ import org.dom4j.io.SAXReader;
 public class DispatcherServlet extends HttpServlet {
 	
 	private HandlerMapping hm;
-	
+//	程序的起点
 	@Override
 	public void init() throws ServletException {
 		
