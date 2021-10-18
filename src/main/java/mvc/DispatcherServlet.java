@@ -37,7 +37,7 @@ public class DispatcherServlet extends HttpServlet {
 		}
 		
 	}
-
+//servlet的主要工作就是service方法
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
