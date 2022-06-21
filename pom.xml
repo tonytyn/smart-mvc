@@ -12,7 +12,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.21</version>
+			<version>8.0.28</version>
 		</dependency>
 
 		<!-- 解决编译时，报程序包javax.servlet不存在的错误 -->
